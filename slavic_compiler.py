@@ -1,21 +1,19 @@
 import os
 keywords = {
         "цифра": "int",
-        "строка": "std::string",
+        "ничего_не_знаю": "void",
         "булев": "bool",
-        "молвить": "cout",
-        "прыг_скок": "endl",
         "для": "for",
         "пока": "while",
         "возвращати": "return",
-        "молвить_правду": "printf",
+        "молвить": "printf",
         "истина": "true",
         "ложь": "false",
         "царь_батюшка_главный": "main",
-        "внедрить": "using",
-        "хутор": "namespace",
         "#подключати": "#include",
-        "буква": "char"
+        "буква": "char",
+        "#признавати": "#define",
+        "узнать": "scanf"
         }
 # Запрашиваем имя файла
 file_name = input("Введите название файла: ")
@@ -43,6 +41,6 @@ for line in lines:
 output_data = "\n".join(processed_lines)
 
 # Печатаем итоговый вариант программы
-with open(f"{file_name}_temp.cpp", "w") as o:
+with open(f"{file_name}_temp.c", "w") as o:
     o.write(output_data)
-os.system(f"g++ -o {file_name.split('.')[0]} {file_name}_temp.cpp")
+os.system(f"g++ -o {file_name.split('.')[0]} {file_name}_temp.c")
